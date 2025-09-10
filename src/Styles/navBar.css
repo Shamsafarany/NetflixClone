@@ -7,13 +7,13 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: Arial, Helvetica, sans-serif;
   transform: translateY(-20%);
   box-sizing: border-box;
   width: 100%;
   min-width: 450px;
   max-width: 1200px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 .cont1 {
   display: flex;
@@ -86,8 +86,8 @@ input {
   max-width: 100%;
   margin-left: 10px;
 }
-.wrapper{
-    position: relative;
+.wrapper {
+  position: relative;
 }
 input::placeholder {
   color: var(--main-color);
