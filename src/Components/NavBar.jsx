@@ -1,7 +1,36 @@
+import { useState } from "react";
 import img from "../assets/icons8-netflix (1).svg";
 import "../styles/navBar.css";
 import search from "../assets/icons8-search (1).svg";
+import send from "../assets/icons8-send-48.png";
+import closeIcon from "../assets/icons8-close-50.png";
+
 function NavBar() {
+  const [showInput, setShowInput] = useState(false);
+  const [showSearch, setShowSearch] = useState("");
+  function handleInput(e) {
+    if (e.target.value === "") {
+      return;
+    }
+    setShowSearch(e.target.value.trim());
+  }
+
+  function handleShowInput() {
+    setShowInput(true);
+  }
+  function handleSubmit(e) {
+    e.preventDefault();
+    if (showSearch === "") {
+      return;
+    }
+    setShowSearch("");
+    setShowInput(false);
+  }
+  function handleClearInput() {
+    setShowSearch("");
+    setShowInput(false);
+  }
+
   return (
     <>
       <nav className="navBar">
@@ -15,8 +44,36 @@ function NavBar() {
           </ul>
         </div>
         <div className="cont2">
-          <input type="text" placeholder="Search for shows..." />
-          <img src={search} alt="search" className="search" />
+          {showInput ? (
+            <form className="searchForm" onSubmit={handleSubmit}>
+              <div className="wrapper">
+                <input
+                  type="text"
+                  placeholder="Search for shows..."
+                  onChange={handleInput}
+                  value={showSearch}
+                  autoFocus
+                />
+                <img
+                  src={closeIcon}
+                  alt="close"
+                  className="closeIcon"
+                  onClick={handleClearInput}
+                />
+              </div>
+
+              <button type="submit" className="sendBtn">
+                <img src={send} alt="search" className="send" />
+              </button>
+            </form>
+          ) : (
+            <img
+              src={search}
+              alt="search"
+              className="search"
+              onClick={handleShowInput}
+            />
+          )}
         </div>
       </nav>
     </>

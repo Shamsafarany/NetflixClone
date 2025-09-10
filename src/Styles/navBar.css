@@ -1,5 +1,6 @@
-:root{
-    --main-color:  rgba(255, 255, 255, 0.693);
+:root {
+  --main-color: rgba(255, 255, 255, 0.693);
+  --red-color: #ff0c19;
 }
 
 nav {
@@ -8,7 +9,11 @@ nav {
   align-items: center;
   font-family: Arial, Helvetica, sans-serif;
   transform: translateY(-20%);
-  min-width: 600px;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 450px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .cont1 {
   display: flex;
@@ -18,6 +23,21 @@ nav {
 .logo {
   width: 90px;
   margin-left: 20px;
+  transition: transform 0.3s ease;
+}
+.logo:hover {
+  animation: rotate 1s ease-out;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(360deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
 }
 
 ul {
@@ -47,17 +67,67 @@ li:hover {
   cursor: pointer;
   transition: transform 0.3s ease;
 }
-.search:hover{
-    transform: scale(1.1);
+.search:hover {
+  transform: scale(1.1);
+}
+.cont2 {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+input {
+  background-color: black;
+  border: 1px solid var(--main-color);
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: var(--main-color);
+  outline: none;
+  font-size: 0.6rem;
+  max-width: 100%;
+  margin-left: 10px;
+}
+.wrapper{
+    position: relative;
+}
+input::placeholder {
+  color: var(--main-color);
+  font-size: 0.6rem;
+}
+.searchForm {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+  gap: 5px;
+}
+.send {
+  width: 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.sendBtn {
+  background-color: black;
+  border: 1px solid var(--main-color);
+  border-radius: 5px;
+  padding: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, border 0.3s ease;
+}
+.sendBtn:hover {
+  border: 1px solid var(--red-color);
+  transform: scale(1.1);
 }
 
-input{
-    background-color: black;
-    border: 1px solid var(--main-color);
-    border-radius: 5px;
-    padding: 5px 15px;
+.closeIcon {
+  width: 12px;
+  cursor: pointer;
+  position: absolute;
+  right: 3%;
+  top: 25%;
+  transition: trnsform 0.3s ease;
 }
-input::placeholder{
-    color: var(--main-color);
-    font-size: 0.6rem;
+.closeIcon:hover {
+  transform: scale(1.2);
 }
