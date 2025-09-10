@@ -1,9 +1,10 @@
 import NavBar from "../Components/NavBar";
 import Grid from "../Components/Grid";
+import Carousel from "../Components/Carousel";
 
 function Home() {
   const movies = [
-    { title: "Inception", year: 2010 },
+    { title: "Stranger Things", year: 2020 },
     { title: "The Matrix", year: 1999 },
     { title: "Interstellar", year: 2014 },
     { title: "The Dark Knight", year: 2008 },
@@ -17,8 +18,8 @@ function Home() {
   return (
     <>
       <NavBar />
-      <Grid movies={movies}/>
-      
+      <Carousel movies={movies} />
+      <Grid movies={movies} />
     </>
   );
 }

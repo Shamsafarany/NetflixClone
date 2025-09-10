@@ -9,7 +9,7 @@
   box-sizing: border-box;
 }
 .subtitle{
-  color: var(--main-color);
+  color: white;
   padding: 0px 20px;
   font-size: 0.7rem;
   transform: translateY(6px);
