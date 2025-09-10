@@ -1,5 +1,6 @@
 import NavBar from "../Components/NavBar";
-import Card from "../Components/Card";
+import Grid from "../Components/Grid";
+
 function Home() {
   const movies = [
     { title: "Inception", year: 2010 },
@@ -11,16 +12,13 @@ function Home() {
     { title: "The Shawshank Redemption", year: 1994 },
     { title: "The Godfather", year: 1972 },
     { title: "Fight Club", year: 1999 },
-    { title: "The Lord of the Rings: The Return of the King", year: 2003 }
+    { title: "The Lord of the Rings: The Return of the King", year: 2003 },
   ];
   return (
     <>
       <NavBar />
-      <div className="cardContainer">
-        {movies.map((movie, index) => {
-          return <Card key={index} movie ={movie} />;
-        })}
-      </div>
+      <Grid movies={movies}/>
+      
     </>
   );
 }

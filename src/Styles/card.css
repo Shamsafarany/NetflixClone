@@ -1,13 +1,32 @@
 .card {
   background-color: hsla(0, 0%, 100%, 0.436);
   border: 1px solid black;
-  height: 120px;
+  height: 135px;
+  position: relative;
+  transition: transform 0.1s ease;
+  cursor: pointer;
 }
-
+.card:hover {
+  transform: scale(1.05);
+}
+.info {
+  position: absolute;
+  top: 60%;
+  padding: 0 10px;
+}
 .title {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
+  color: var(--main-color);
 }
 
 .year {
   font-size: 0.7rem;
+  color: var(--main-color);
+}
+
+.logos{
+  position: absolute;
+  width: 12px;
+  top: 5%;
+  left: 2%;
 }

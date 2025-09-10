@@ -1,0 +1,19 @@
+.cardContainer {
+  width: 100%;
+  max-width: 900px;
+  transform: translateY(-10px);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 5px;
+  padding: 0px 20px;
+  box-sizing: border-box;
+}
+.subtitle{
+  color: var(--main-color);
+  padding: 0px 20px;
+  font-size: 0.7rem;
+  transform: translateY(6px);
+}
+.main{
+  transform: translateY(-60px);
+}
