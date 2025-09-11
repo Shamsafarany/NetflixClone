@@ -5,7 +5,7 @@ import search from "../assets/icons8-search (1).svg";
 import send from "../assets/icons8-send-48.png";
 import closeIcon from "../assets/icons8-close-50.png";
 
-function NavBar() {
+function NavBar({ type = "default" }) {
   const [showInput, setShowInput] = useState(false);
   const [showSearch, setShowSearch] = useState("");
   function handleInput(e) {
@@ -34,47 +34,58 @@ function NavBar() {
   return (
     <>
       <nav className="navBar">
-        <div className="cont1">
-          <img src={img} alt="logo" className="logo" />
-          <ul>
-            <li>Home</li>
-            <li>TV Shows</li>
-            <li>Movies</li>
-            <li>Favorites</li>
-          </ul>
-        </div>
-        <div className="cont2">
-          {showInput ? (
-            <form className="searchForm" onSubmit={handleSubmit}>
-              <div className="wrapper">
-                <input
-                  type="text"
-                  placeholder="Search for shows..."
-                  onChange={handleInput}
-                  value={showSearch}
-                  autoFocus
-                />
-                <img
-                  src={closeIcon}
-                  alt="close"
-                  className="closeIcon"
-                  onClick={handleClearInput}
-                />
-              </div>
+        {type === "default" ? (
+          <>
+            <div className="cont1">
+              <img src={img} alt="logo" className="logo" />
+              <ul>
+                <li>Home</li>
+                <li>TV Shows</li>
+                <li>Movies</li>
+                <li>Favorites</li>
+              </ul>
+            </div>
+            <div className="cont2">
+              {showInput ? (
+                <form className="searchForm" onSubmit={handleSubmit}>
+                  <div className="wrapper">
+                    <input
+                      type="text"
+                      placeholder="Search for shows..."
+                      onChange={handleInput}
+                      value={showSearch}
+                      autoFocus
+                    />
+                    <img
+                      src={closeIcon}
+                      alt="close"
+                      className="closeIcon"
+                      onClick={handleClearInput}
+                    />
+                  </div>
 
-              <button type="submit" className="sendBtn">
-                <img src={send} alt="search" className="send" />
-              </button>
-            </form>
-          ) : (
-            <img
-              src={search}
-              alt="search"
-              className="search"
-              onClick={handleShowInput}
-            />
-          )}
-        </div>
+                  <button type="submit" className="sendBtn">
+                    <img src={send} alt="search" className="send" />
+                  </button>
+                </form>
+              ) : (
+                <img
+                  src={search}
+                  alt="search"
+                  className="search"
+                  onClick={handleShowInput}
+                />
+              )}
+            </div>{" "}
+          </>
+        ) : (
+          <>
+            <div className="cont3">
+              <img src={img} alt="logo" className="logo" />
+              <button className="signIn">Sign In</button>
+            </div>
+          </>
+        )}
       </nav>
     </>
   );

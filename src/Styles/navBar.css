@@ -126,3 +126,26 @@ input::placeholder {
 .closeIcon:hover {
   transform: scale(1.2);
 }
+
+.cont3{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 5px;
+}
+.signIn{
+  background-color: var(--red-color);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 4px 8px;
+  margin-right: 10px;
+  font-size: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.signIn:hover{
+  background-color: #e50914cc;
+}

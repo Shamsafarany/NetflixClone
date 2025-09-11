@@ -1,6 +1,7 @@
 import NavBar from "../Components/NavBar";
 import Grid from "../Components/Grid";
 import Carousel from "../Components/Carousel";
+import Action from "../Components/Action";
 
 function Home() {
   const movies = [
@@ -20,6 +21,8 @@ function Home() {
       <NavBar />
       <Carousel movies={movies} />
       <Grid movies={movies} />
+      <NavBar type="login" />
+      <Action />
     </>
   );
 }
