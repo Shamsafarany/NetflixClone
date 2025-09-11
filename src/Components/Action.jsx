@@ -1,6 +1,12 @@
 import background from "../assets/background.jpg";
 import '../Styles/Action.css';
+import { useState } from "react";
 function Action(){
+  const [email, setEmail] = useState("");
+  function handleInput(){
+    if (!email) return;
+    setEmail("");
+  }
     return (
       <>
         <div className="containers">
@@ -12,6 +18,17 @@ function Action(){
               Ready to watch? Enter your email to create or restart your
               membership.
             </p>
+            <div className="emailCont">
+              <input
+                type="email"
+                className="email"
+                placeholder="Email address"
+                required
+                value ={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <button onClick={handleInput}className="getStarted">Get Started &#10095;</button>
+            </div>
           </div>
         </div>
       </>
