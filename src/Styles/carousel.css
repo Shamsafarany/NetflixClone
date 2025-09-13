@@ -41,9 +41,14 @@
   width: 100%;
 }
 .text {
+  display: flex;
+  flex-direction: column;
   position: absolute;
   top: 20%;
   left: 10%;
+  border: solid red;
+  width: 100%;
+
 }
 p {
   color: var(--main-color);
@@ -66,7 +71,6 @@ h3 {
   font-family: Georgia, "Times New Roman", Times, serif;
   color: white;
   font-size: 1.3rem;
-  max-width: 250px;
 }
 
 .play {
@@ -78,9 +82,11 @@ h3 {
   padding: 4px 10px;
   font-size: 0.6rem;
   border-radius: 2px;
+  z-index: 3; 
+  transition: background-color 0.3s ease;  
 }
 .play:hover{
-  background-color: rgb(118, 13, 13);
+  background-color: rgba(255, 255, 255, 0.405);
   color: whitesmoke;
 }
 .play img {
@@ -116,6 +122,8 @@ h3 {
 
 .overview {
   max-width: 250px;
+  width: 100%;
+  box-sizing: border-box;
   letter-spacing: 0.5px;
 }
 .slideBtns{
@@ -131,8 +139,19 @@ h3 {
   background-color: gray;
   color: white;
   border-radius: 2px;
+  z-index: 3;   
+  transition: background-color 0.3s ease-in-out;
 }
 .addList:hover{
-  background-color: rgb(118, 13, 13);
-  color: black;
+  background-color: rgba(111, 108, 108, 0.504);
+}
+
+.pgRating{
+  width: 100px;
+  color: var(--main-color);
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  left: 100%;
+  font-size: 0.8rem;
+  text-align: center;
 }

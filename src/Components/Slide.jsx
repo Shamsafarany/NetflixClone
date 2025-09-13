@@ -29,6 +29,9 @@ function Slide({ movie , active }) {
             </button>
             <button className="addList">+ Add List</button>
           </div>
+          <div className="pgRating">
+            PG-13
+          </div>
         </div>
       </div>
     </div>
