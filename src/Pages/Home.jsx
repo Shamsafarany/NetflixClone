@@ -2,8 +2,11 @@ import NavBar from "../Components/NavBar";
 import Grid from "../Components/Grid";
 import Carousel from "../Components/Carousel";
 import Action from "../Components/Action";
+import { searchMovies, getPopularMovies } from "../Services/api";
+import { useEffect, useState } from "react";
 
 function Home() {
+  /*
   const movies = [
     { title: "Stranger Things", year: 2020 },
     { title: "The Matrix", year: 1999 },
@@ -16,6 +19,20 @@ function Home() {
     { title: "Fight Club", year: 1999 },
     { title: "The Lord of the Rings: The Return of the King", year: 2003 },
   ];
+  */
+
+  const [movies, setMovies] = useState([]);
+  useEffect(() => {
+    const loadPopularMovies = async () => {
+      try {
+        const popularMovies = await getPopularMovies();
+        setMovies(popularMovies);
+      } catch (e) {
+        console.log(e);
+      }
+    };
+    loadPopularMovies();
+  }, []);
   return (
     <>
       <NavBar />

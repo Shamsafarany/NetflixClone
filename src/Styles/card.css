@@ -6,17 +6,29 @@
   transition: transform 0.1s ease;
   cursor: pointer;
 }
+.poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .card:hover {
   transform: scale(1.05);
 }
 .info {
   position: absolute;
-  top: 60%;
+  top: 73%;
   padding: 0 10px;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
 .title {
-  font-size: 0.75rem;
-  color: var(--main-color);
+  font-size: 0.7rem;
+  color: white;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;     /* number of lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .year {
@@ -24,7 +36,7 @@
   color: var(--main-color);
 }
 
-.logos{
+.logos {
   position: absolute;
   width: 12px;
   top: 5%;

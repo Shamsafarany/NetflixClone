@@ -3,7 +3,7 @@
   max-width: 900px;
   transform: translateY(-10px);
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 5px;
   padding: 0px 20px;
   box-sizing: border-box;
