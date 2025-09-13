@@ -47,7 +47,6 @@
   top: 20%;
   left: 10%;
   width: 70%;
-
 }
 p {
   color: var(--main-color);
@@ -81,10 +80,10 @@ h3 {
   padding: 4px 10px;
   font-size: 0.6rem;
   border-radius: 2px;
-  z-index: 3; 
-  transition: background-color 0.3s ease;  
+  z-index: 3;
+  transition: background-color 0.3s ease;
 }
-.play:hover{
+.play:hover {
   background-color: rgba(255, 255, 255, 0.405);
   color: whitesmoke;
 }
@@ -126,12 +125,12 @@ h3 {
   letter-spacing: 0.5px;
 }
 
-.slideBtns{
+.slideBtns {
   display: flex;
   align-items: center;
   gap: 3px;
 }
-.addList{
+.addList {
   border: none;
   font-weight: 500;
   padding: 4px 10px;
@@ -139,14 +138,14 @@ h3 {
   background-color: gray;
   color: white;
   border-radius: 2px;
-  z-index: 3;   
+  z-index: 3;
   transition: background-color 0.3s ease-in-out;
 }
-.addList:hover{
+.addList:hover {
   background-color: rgba(111, 108, 108, 0.504);
 }
 
-.pgRating{
+.pgRating {
   color: var(--main-color);
   background-color: rgba(0, 0, 0, 0.7);
   font-size: 0.7rem;
@@ -154,9 +153,7 @@ h3 {
   text-align: center;
   border-left: 2px solid var(--red-color);
   width: 40px;
-  margin-left: auto; 
+  margin-left: auto;
   margin-right: 20px;
   margin-top: 300px;
 }
-
-

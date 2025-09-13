@@ -1,7 +1,7 @@
 import { useState } from "react";
 import img from "../assets/icons8-netflix (1).svg";
 import "../styles/navBar.css";
-import search from "../assets/icons8-search (1).svg";
+import search from "../assets/icons8-search (2).svg";
 import send from "../assets/icons8-send-48.png";
 import closeIcon from "../assets/icons8-close-50.png";
 
