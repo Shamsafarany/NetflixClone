@@ -1,6 +1,11 @@
 import "../Styles/Card.css";
 import logo from "../assets/netflix_732228.png";
-function Card({ movie, type }) {
+import {useContext} from 'react';
+import { TypeContext } from "./Grid";
+
+function Card({movie}) {
+
+  const type = useContext(TypeContext);
 
   const title = (type === "series") ? movie.name : movie.title;
   const year =

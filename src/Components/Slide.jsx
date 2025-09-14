@@ -1,4 +1,3 @@
-import img from "../assets/stranger.jpeg";
 import "../Styles/carousel.css";
 import logo from "../assets/netflix_732228.png";
 import playBtn from "../assets/icons8-play-50.png";
