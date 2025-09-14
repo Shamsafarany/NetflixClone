@@ -4,6 +4,7 @@ import "../styles/navBar.css";
 import search from "../assets/icons8-search (2).svg";
 import send from "../assets/icons8-send-48.png";
 import closeIcon from "../assets/icons8-close-50.png";
+import {Link} from "react-router-dom";
 
 function NavBar({ type = "default" }) {
   const [showInput, setShowInput] = useState(false);
@@ -39,10 +40,21 @@ function NavBar({ type = "default" }) {
             <div className="cont1">
               <img src={img} alt="logo" className="logo" />
               <ul>
-                <li>Home</li>
-                <li>TV Shows</li>
-                <li>Movies</li>
-                <li>Favorites</li>
+                <Link to="/" className="li">
+                  Home
+                </Link>
+                <Link to="/login" className="li">
+                  Login
+                </Link>
+                <Link to="/" className="li">
+                  TV Shows
+                </Link>
+                <Link to="/" className="li">
+                  Movies
+                </Link>
+                <Link to="/" className="li">
+                  List
+                </Link>
               </ul>
             </div>
             <div className="cont2">

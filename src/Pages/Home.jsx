@@ -1,7 +1,7 @@
 import NavBar from "../Components/NavBar";
 import Grid from "../Components/Grid";
 import Carousel from "../Components/Carousel";
-import Action from "../Components/Action";
+
 import {
   searchMovies,
   getPopularSeries,
@@ -13,7 +13,7 @@ function Home() {
   const [movies, setMovies] = useState([]);
   const [series, setSeries] = useState([]);
   useEffect(() => {
-    const loadPopularSeries = async () => {
+    async function loadPopularSeries() {
       try {
         const popularSeries = await getPopularSeries();
         setSeries(popularSeries);
@@ -24,7 +24,7 @@ function Home() {
     loadPopularSeries();
   }, []);
   useEffect(() => {
-    const loadPopularMovies = async () => {
+    async function loadPopularMovies(){
       try {
         const popularMovies = await getPopularMovies();
         setMovies(popularMovies);
@@ -40,8 +40,7 @@ function Home() {
       <Carousel movies={series} />
       <Grid movies={series} type="series" />
       <Grid movies={movies} type="movies" />
-      <NavBar type="login" />
-      <Action />
+      
     </>
   );
 }
