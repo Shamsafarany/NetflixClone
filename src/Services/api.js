@@ -30,9 +30,24 @@ export async function getTVGenres() {
   return data.genres;
 }
 
-export async function getTVShowsByGenres(genreId){
+export async function getTVShowsByGenres(genreId) {
   const response = await fetch(
     `${BASE_URL}/discover/tv?api_key=${API_KEY}&with_genres=${genreId}&language=en-US&sort_by=popularity.desc`
+  );
+  const data = await response.json();
+  return data.results.slice(0, 10);
+}
+export async function getMovieGenres() {
+  const response = await fetch(
+    `${BASE_URL}/genre/movie/list?api_key=${API_KEY}&language=en-US`
+  );
+  const data = await response.json();
+  return data.genres;
+}
+
+export async function getMoviesByGenres(genreId) {
+  const response = await fetch(
+    `${BASE_URL}/discover/movie?api_key=${API_KEY}&with_genres=${genreId}&language=en-US&sort_by=popularity.desc`
   );
   const data = await response.json();
   return data.results.slice(0, 10);

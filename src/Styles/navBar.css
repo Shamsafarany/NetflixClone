@@ -179,3 +179,8 @@ input::placeholder {
 .signIn:hover {
   background-color: #e50914cc;
 }
+
+.activeBar{
+  color: white;
+  text-decoration: underline;
+}

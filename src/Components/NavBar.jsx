@@ -48,29 +48,17 @@ function NavBar({ type = "default" }) {
                 </Link>
                 <Link
                   to="/shows"
-                  className="li"
-                  style={{
-                    color:
-                      location.pathname === "/shows"
-                        ? "white"
-                        : "rgba(255, 255, 255, 0.693)",
-                    textDecoration:
-                      location.pathname === "/shows" ? "underline" : "none",
-                  }}
+                  className={`li ${
+                    location.pathname === "/shows" ? "activeBar" : ""
+                  }`}
                 >
                   TV Shows
                 </Link>
                 <Link
                   to="/movies"
-                  className="li"
-                  style={{
-                    color:
-                      location.pathname === "/"
-                        ? "white"
-                        : "rgba(255, 255, 255, 0.693)",
-                    textDecoration:
-                      location.pathname === "/movies" ? "underline" : "none",
-                  }}
+                  className={`li ${
+                    location.pathname === "/movies" ? "activeBar" : ""
+                  }`}
                 >
                   Movies
                 </Link>

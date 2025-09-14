@@ -11,7 +11,6 @@ function Shows() {
       const data = {};
 
       for (const genre of genres) {
-        console.log(genre.id);
         const shows = await getTVShowsByGenres(genre.id);
         data[genre.name] = shows;
       }
