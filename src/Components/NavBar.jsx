@@ -46,10 +46,32 @@ function NavBar({ type = "default" }) {
                 <Link to="/login" className="li">
                   Login
                 </Link>
-                <Link to="/" className="li">
+                <Link
+                  to="/shows"
+                  className="li"
+                  style={{
+                    color:
+                      location.pathname === "/shows"
+                        ? "white"
+                        : "rgba(255, 255, 255, 0.693)",
+                    textDecoration:
+                      location.pathname === "/shows" ? "underline" : "none",
+                  }}
+                >
                   TV Shows
                 </Link>
-                <Link to="/" className="li">
+                <Link
+                  to="/movies"
+                  className="li"
+                  style={{
+                    color:
+                      location.pathname === "/"
+                        ? "white"
+                        : "rgba(255, 255, 255, 0.693)",
+                    textDecoration:
+                      location.pathname === "/movies" ? "underline" : "none",
+                  }}
+                >
                   Movies
                 </Link>
                 <Link to="/" className="li">
