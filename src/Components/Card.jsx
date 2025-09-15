@@ -26,7 +26,7 @@ function Card({movie}) {
             {title} <br />
             <span className="year">{year}</span>
           </p>
-          <button class="add-btn">+</button>
+          <button className="add-btn">+</button>
         </div>
       </div>
     </>

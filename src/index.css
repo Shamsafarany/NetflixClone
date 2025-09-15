@@ -10,3 +10,56 @@ body {
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.loading-container{
+  display: flex;
+  justify-content: center; 
+  align-items: center;    
+  height: 100vh; 
+}
+.loading-text {
+  font-size: 3rem;
+  font-weight: bold;
+  display: flex;
+  gap: 0.2rem;
+}
+
+.dot{
+  color: var(--red-color);
+  animation: wave 1s infinite;
+}
+
+.dot:nth-child(1) {
+  animation-delay: 0s;
+}
+.dot:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.dot:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.dot:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-15px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
+
+
+

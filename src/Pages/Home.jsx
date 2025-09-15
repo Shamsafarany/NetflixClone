@@ -12,35 +12,61 @@ import { useEffect, useState } from "react";
 function Home() {
   const [movies, setMovies] = useState([]);
   const [series, setSeries] = useState([]);
+  const [error, setError] = useState(null);
+  const[loading, setLoading] = useState(true);
+
   useEffect(() => {
     async function loadPopularSeries() {
       try {
         const popularSeries = await getPopularSeries();
         setSeries(popularSeries);
-      } catch (e) {
-        console.log(e);
+      } catch (error) {
+        console.log(error);
+        setError(error);
+      } finally {
+        setLoading(false);
       }
-    };
+    }
     loadPopularSeries();
   }, []);
   useEffect(() => {
-    async function loadPopularMovies(){
+    async function loadPopularMovies() {
       try {
         const popularMovies = await getPopularMovies();
         setMovies(popularMovies);
-      } catch (e) {
-        console.log(e);
+      } catch (error) {
+        console.log(error);
+        setError(error);
+      } finally {
+        setLoading(false);
       }
-    };
+    }
     loadPopularMovies();
   }, []);
+
+  if (loading) {
+    return (
+      <div className="loading-container">
+        <div className="loading-text">
+          <span className="dot">.</span>
+          <span className="dot">.</span>
+          <span className="dot">.</span>
+          <span className="dot">.</span>
+          <span className="dot">.</span>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return <p>Error loading content: {error.message}</p>;
+  }
   return (
     <>
       <NavBar />
       <Carousel movies={series} />
       <Grid movies={series} type="series" />
       <Grid movies={movies} type="movies" />
-      
     </>
   );
 }
