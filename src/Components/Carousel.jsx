@@ -23,6 +23,21 @@ function Carousel({ movies }) {
     }
   }, [currentIndex]);
 
+  useEffect(() => {
+    const handleKeys = (e) => {
+      if (e.key === "ArrowLeft") {
+        prevSlide();
+      } else if (e.key === "ArrowRight") {
+        nextSlide();
+      }
+    };
+    window.addEventListener("keydown", handleKeys);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeys);
+    }
+  }, []);
+
   return (
     <div className="carouselCont">
       <button onClick={prevSlide} className="carouselBtn left">

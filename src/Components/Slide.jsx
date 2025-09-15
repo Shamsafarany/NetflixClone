@@ -1,6 +1,7 @@
 import "../Styles/carousel.css";
 import logo from "../assets/netflix_732228.png";
 import playBtn from "../assets/icons8-play-50.png";
+import {useEffect} from "react";
 function Slide({ movie, active }) {
   return (
     <div className={`slide ${active ? "active" : ""}`}>
