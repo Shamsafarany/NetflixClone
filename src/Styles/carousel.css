@@ -1,6 +1,5 @@
 .carouselCont {
-  transform: translateY(-40px);
-  height: calc(100vh - 50px);
+  height: 101vh;
   width: 100%;
   position: relative;
   display: flex;

@@ -1,19 +1,21 @@
 .cardContainer {
   width: 100%;
   max-width: 900px;
-  transform: translateY(-10px);
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 5px;
   padding: 0px 20px;
   box-sizing: border-box;
+  
 }
-.subtitle{
+
+.subtitle {
   color: white;
-  padding: 5px 20px 0px;
+  padding: 0px 0px 0px 20px;
   font-size: 0.7rem;
-  transform: translateY(6px);
+  transform: translateY(16px);
 }
-.main{
-  transform: translateY(-60px);
+
+.main > .cardContainer:first-child {
+  margin-top: 300px; /* same as navbar height */
 }
