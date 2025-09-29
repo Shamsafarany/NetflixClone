@@ -1,3 +1,6 @@
+.main{
+  position: relative;
+}
 .cardContainer {
   width: 100%;
   max-width: 900px;
@@ -5,10 +8,8 @@
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 5px;
   padding: 0px 20px;
-  box-sizing: border-box;
-  
+  box-sizing: border-box;  
 }
-
 .subtitle {
   color: white;
   padding: 0px 0px 0px 20px;
@@ -16,6 +17,38 @@
   transform: translateY(16px);
 }
 
+.searchResults{
+  position: fixed;
+  width: 100%;
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 5px;
+  padding: 0px 20px;
+  box-sizing: border-box;
+  right: 0;
+  top: 40px;
+  z-index: 1000;
+  max-height: 100vh; /* or whatever height you prefer */
+  overflow-y: auto;
+  background: #000;
+
+}
+.cardContainer.hidden{
+  display: none !important;
+}
+.searchResults.hidden{
+  display: none !important;
+}
 .main > .cardContainer:first-child {
   margin-top: 300px; /* same as navbar height */
 }
+.main > .searchResults:first-child {
+  margin-top: 300px; /* same as navbar height */
+}
+
+.subtitle.searchingTitle{
+    border: solid red;
+    transform: translateX(-596%)translateY(130%);
+}
+

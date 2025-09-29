@@ -14,6 +14,7 @@ function Home() {
   const [series, setSeries] = useState([]);
   const [error, setError] = useState(null);
   const[loading, setLoading] = useState(true);
+  
 
   useEffect(() => {
     async function loadPopularSeries() {

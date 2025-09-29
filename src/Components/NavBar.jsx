@@ -121,7 +121,7 @@ function NavBar({ type = "default" }) {
                       <img src={send} alt="search" className="send" />
                     </button>
                   </form>
-                  <div className="searchResults">
+                  <div>
                     {movies.length > 0 && (
                       <Grid
                         movies={movies}
