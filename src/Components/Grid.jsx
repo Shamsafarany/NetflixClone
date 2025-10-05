@@ -4,30 +4,60 @@ import { createContext } from "react";
 
 export const TypeContext = createContext(null);
 
-function Grid({ movies, type, genre = "default", className = "none" }) {
+function Grid({
+  movies,
+  type,
+  genre = "default",
+  className = "none",
+  favorites,
+  onAddFavorite,
+}) {
   const isSearching = className !== "none";
+  function getSubtitleText(className, genre, type) {
+    if (className !== "none") {
+      return "Search Results";
+    }
+
+    if (genre !== "default") {
+      return genre;
+    }
+
+    if (type === "series") {
+      return "Trending Series";
+    } else if (type === "movies") {
+      return "Trending Movies";
+    } else {
+      return "Favorites";
+    }
+  }
   return (
     <>
       <TypeContext.Provider value={type}>
         <div className="main">
           <h5 className={`subtitle ${isSearching ? `searchingTitle` : ``}`}>
-            {className === "none"
-              ? genre === "default"
-                ? type === "series"
-                  ? "Trending Series"
-                  : "Trending Movies"
-                : genre
-              : "Search Results"}
+            {getSubtitleText(className, genre, type)}
           </h5>
           <div className={`cardContainer ${isSearching ? "hidden" : ``}`}>
-            {movies.map((movie, index) => {
-              return <Card key={index} movie={movie} />;
-            })}
+            {movies.length === 0 ? (
+              <div className="noFavorites">No favorites added</div>
+            ) : (
+              movies.map((movie, index) => {
+                return (
+                  <Card
+                    key={index}
+                    movie={movie}
+                    onAddFavorite={onAddFavorite}
+                  />
+                );
+              })
+            )}
           </div>
 
           <div className={`searchResults ${!isSearching ? `hidden` : ``}`}>
             {movies.map((movie, index) => {
-              return <Card key={index} movie={movie} />;
+              return (
+                <Card key={index} movie={movie} onAddFavorite={onAddFavorite} />
+              );
             })}
           </div>
         </div>

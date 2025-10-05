@@ -7,14 +7,13 @@ import {
   getPopularSeries,
   getPopularMovies,
 } from "../Services/api";
-import { useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
 
 function Home() {
   const [movies, setMovies] = useState([]);
   const [series, setSeries] = useState([]);
   const [error, setError] = useState(null);
-  const[loading, setLoading] = useState(true);
-  
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function loadPopularSeries() {
@@ -62,12 +61,13 @@ function Home() {
   if (error) {
     return <p>Error loading content: {error.message}</p>;
   }
+
   return (
     <>
       <NavBar />
       <Carousel movies={series} />
-      <Grid movies={series} type="series" />
-      <Grid movies={movies} type="movies" />
+      <Grid movies={series} type="series" onAddFavorite={handleAddFavorites} />
+      <Grid movies={movies} type="movies" onAddFavorite={handleAddFavorites} />
     </>
   );
 }

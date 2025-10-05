@@ -1,17 +1,19 @@
 import "../Styles/Card.css";
 import logo from "../assets/netflix_732228.png";
-import {useContext} from 'react';
+import { useContext, useState } from "react";
 import { TypeContext } from "./Grid";
 
-function Card({movie}) {
-
+function Card({ movie, onAddFavorite}) {
   const type = useContext(TypeContext);
-
-  const title = (type === "series") ? movie.name : movie.title;
+  const title = type === "series" ? movie.name : movie.title;
   const year =
     type === "series"
       ? movie.first_air_date?.split("-")[0]
       : movie.release_date?.split("-")[0];
+
+  function handleAddFave(){
+    onAddFavorite(movie);
+  }
   return (
     <>
       <div className="card">
@@ -26,7 +28,9 @@ function Card({movie}) {
             {title} <br />
             <span className="year">{year}</span>
           </p>
-          <button className="add-btn">+</button>
+          <button className="add-btn" onClick={handleAddFave}>
+            +
+          </button>
         </div>
       </div>
     </>

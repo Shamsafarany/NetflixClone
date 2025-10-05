@@ -88,7 +88,7 @@ function NavBar({ type = "default" }) {
                 >
                   Movies
                 </Link>
-                <Link to="/" className="li">
+                <Link to="/list" className="li">
                   List
                 </Link>
               </ul>
