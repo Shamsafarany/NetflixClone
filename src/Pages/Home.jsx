@@ -7,13 +7,14 @@ import {
   getPopularSeries,
   getPopularMovies,
 } from "../Services/api";
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 function Home() {
   const [movies, setMovies] = useState([]);
   const [series, setSeries] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
     async function loadPopularSeries() {
@@ -43,6 +44,9 @@ function Home() {
     }
     loadPopularMovies();
   }, []);
+  function handleAddFavorites(movie) {
+    setFavorites([...favorites, movie]);
+  }
 
   if (loading) {
     return (
