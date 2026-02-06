@@ -30,6 +30,7 @@ function Home() {
     }
     loadPopularSeries();
   }, []);
+
   useEffect(() => {
     async function loadPopularMovies() {
       try {
@@ -44,6 +45,7 @@ function Home() {
     }
     loadPopularMovies();
   }, []);
+  
   function handleAddFavorites(movie) {
     setFavorites([...favorites, movie]);
   }

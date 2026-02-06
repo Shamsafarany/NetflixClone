@@ -3,6 +3,7 @@ import Login from "./Pages/Login";
 import Shows from "./Pages/Shows";
 import Movies from "./Pages/Movies";
 import List from "./Pages/List";
+import Search from "./Pages/Search";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
@@ -14,7 +15,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/shows" element={<Shows />} />
           <Route path="/movies" element={<Movies />} />
-          <Route path="/list" element={<List/>} />
+          <Route path="/list" element={<List />} />
+          <Route path="/search" element={<Search />} />
         </Routes>
       </main>
     </>

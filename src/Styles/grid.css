@@ -17,22 +17,6 @@
   transform: translateY(16px);
 }
 
-.searchResults {
-  position: fixed;
-  width: 100%;
-  max-width: 900px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 5px;
-  padding: 0px 20px;
-  box-sizing: border-box;
-  right: 0;
-  top: 40px;
-  z-index: 1000;
-  max-height: 100vh;
-  overflow-y: auto;
-  background: #000;
-}
 .cardContainer.hidden {
   display: none !important;
 }

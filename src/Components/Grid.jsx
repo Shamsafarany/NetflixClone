@@ -11,9 +11,13 @@ function Grid({
   className = "none",
   favorites,
   onAddFavorite,
+  searching = false
 }) {
   const isSearching = className !== "none";
   function getSubtitleText(className, genre, type) {
+    if(searching) {
+      return "Search Results";
+    }
     if (className !== "none") {
       return "Search Results";
     }
