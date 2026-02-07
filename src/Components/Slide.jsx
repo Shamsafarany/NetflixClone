@@ -1,7 +1,14 @@
 import "../Styles/carousel.css";
 import logo from "../assets/netflix_732228.png";
 import playBtn from "../assets/icons8-play-50.png";
+import { MovieContext, useMovieContext } from "../Context/MovieContext";
+
 function Slide({ movie, active }) {
+   const { addFavorite, removeFavorite, isFavorite } = useMovieContext();
+   const favorite = isFavorite(movie.id);
+   function handleAddFave() {
+     favorite ? removeFavorite(movie.id) : addFavorite(movie);
+   }
   return (
     <div className={`slide ${active ? "active" : ""}`}>
       <img
@@ -30,7 +37,7 @@ function Slide({ movie, active }) {
                 <img src={playBtn} alt="playBtn" />
                 Play
               </button>
-              <button className="addList">+ Add List</button>
+              <button className="addList" onClick={handleAddFave}>+ Add List</button>
             </div>
         </div>
         <div className="pgRating">PG-13</div>

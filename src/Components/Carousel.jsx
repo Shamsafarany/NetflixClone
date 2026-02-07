@@ -1,6 +1,8 @@
 import "../styles/carousel.css";
 import Slide from "./Slide.jsx";
 import { useState, useEffect } from "react";
+import { MovieContext, useMovieContext } from "../Context/MovieContext";
+
 
 function Carousel({ movies }) {
 

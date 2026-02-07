@@ -12,9 +12,13 @@
   z-index: 4;
   transition: background-color 0.3s ease;
   height: 30px;
+  opacity: 0.95;
+  backdrop-filter: blur(10px);
 }
-.scrolled{
+.navBar.scrolled {
   background-color: black;
+  opacity: 1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 .cont1 {
   display: flex;

@@ -17,3 +17,7 @@
 - NPM 
 - useEffects and useContext
 
+# Note
+
+- Includes Sign In and Register forms but not yet implemented
+
