@@ -2,11 +2,6 @@ import { useState, useEffect } from "react";
 import img from "../assets/icons8-netflix (1).svg";
 import "../styles/navBar.css";
 import "../Styles/search.css";
-import search from "../assets/icons8-search (2).svg";
-import send from "../assets/icons8-send-48.png";
-import closeIcon from "../assets/icons8-close-50.png";
-import Grid from "../Components/Grid";
-import { searchMovies } from "../Services/api";
 import { Link } from "react-router-dom";
 
 function NavBar({ type = "default" }) {
@@ -56,8 +51,8 @@ function NavBar({ type = "default" }) {
                 >
                   Movies
                 </Link>
-                <Link to="/list" className="li">
-                  List
+                <Link to="/favorites" className="li">
+                  Favorites
                 </Link>
                 <Link to="/search" className="li">
                   Search

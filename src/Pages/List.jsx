@@ -1,31 +1,15 @@
 import Grid from "../Components/Grid";
 import NavBar from "../Components/NavBar";
-import { useState, useEffect, use } from "react";
+import { MovieContext, useMovieContext } from "../Context/MovieContext";
 function List() {
-  const [favorites, setFavorites] = useState([]);
-  useEffect(() => {
-    const favoriteList = localStorage.getItem("favorites");
-    if (favoriteList) {
-      setFavorites(JSON.parse(favoriteList));
-    }
-  }, []);
+  const {favorites}= useMovieContext(MovieContext);
 
-  useEffect(() => {
-    localStorage.setItem("favorites", JSON.stringify(favorites));
-  }, [favorites]);
-
-  function handleAddFavorites(movie) {
-    setFavorites([...favorites, movie]);
-  }
   return (
     <>
       <NavBar type="default" />
-      <Grid
-        movies={favorites}
-        type="favorites"
-        favorites={favorites}
-        onAddFavorite={handleAddFavorites}
-      />
+      <div className="main">
+        <Grid movies={favorites} type="favorites" favorites={favorites} />
+      </div>
     </>
   );
 }

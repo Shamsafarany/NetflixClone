@@ -60,7 +60,7 @@ function Grid({
           <div className={`searchResults ${!isSearching ? `hidden` : ``}`}>
             {movies.map((movie, index) => {
               return (
-                <Card key={index} movie={movie} onAddFavorite={onAddFavorite} />
+                <Card key={index} movie={movie} />
               );
             })}
           </div>
