@@ -4,6 +4,7 @@
   margin: 70px auto;
   padding: 0 20px;
   box-sizing: border-box;
+  margin-top: 150px;
 }
 
 .searchForm {
@@ -13,10 +14,11 @@
   align-items: center;
   margin: 20px;
   max-width: 600px;
-margin: 20px auto; 
+  margin: 20px auto; 
+  
 }
 .searchForm input::placeholder {
-  font-size: 0.7rem;  
+  font-size: 1.5rem;
 }
 
 .searchInput {
@@ -26,7 +28,7 @@ margin: 20px auto;
   border: 1px solid #444;
   background-color: #141414;
   color: #fff;
-  font-size: 0.7rem;
+  font-size: 1.5rem;
 }
 
 .searchButton {
@@ -38,7 +40,7 @@ margin: 20px auto;
   font-weight: bold;
   cursor: pointer;
   transition: back-ground 0.2s ease;
-  font-size: 0.7rem;
+  font-size: 1.5rem;
 }
 
 .searchButton:hover {

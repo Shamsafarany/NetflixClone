@@ -3,9 +3,8 @@
 }
 .cardContainer {
   width: 100%;
-
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 5px;
   padding: 0px 20px;
   box-sizing: border-box;
@@ -13,7 +12,7 @@
 .subtitle {
   color: white;
   padding: 0px 0px 0px 20px;
-  font-size: 0.7rem;
+  font-size: 1.4rem;
   transform: translateY(16px);
 }
 
@@ -39,5 +38,5 @@
   text-align: center;
   padding: 10px;
   color: gray;
-  font-size: 0.7rem;
+  font-size: 15px;
 }

@@ -1,5 +1,5 @@
 .carouselCont {
-  height: 101vh;
+  height: 100vh;
   width: 100%;
   position: relative;
   display: flex;
@@ -49,7 +49,7 @@
 }
 p {
   color: var(--main-color);
-  font-size: 0.6rem;
+  font-size: 1.2rem;
   padding-right: 40px;
 }
 .logoSlide {
@@ -62,13 +62,13 @@ p {
 }
 .series {
   color: var(--main-color);
-  font-size: 0.45rem;
+  font-size: 1rem;
   letter-spacing: 1px;
 }
 h3 {
   font-family: Georgia, "Times New Roman", Times, serif;
   color: white;
-  font-size: 1.3rem;
+  font-size: 2rem;
   margin-right: 30px;
 }
 
@@ -85,7 +85,7 @@ h3 {
   border: none;
   font-weight: 600;
   padding: 4px 10px;
-  font-size: 0.6rem;
+  font-size: 1.3rem;
   border-radius: 2px;
   z-index: 3;
   transition: background-color 0.3s ease;
@@ -109,7 +109,7 @@ h3 {
   background: none;
   color: var(--main-color);
   border: none;
-  font-size: 0.7rem;
+  font-size: 1rem;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
@@ -126,7 +126,7 @@ h3 {
 }
 
 .overview {
-  max-width: 250px;
+  max-width: 350px;
   width: 100%;
   box-sizing: border-box;
   letter-spacing: 0.5px;
@@ -141,7 +141,7 @@ h3 {
   border: none;
   font-weight: 500;
   padding: 4px 10px;
-  font-size: 0.6rem;
+  font-size: 1.3rem;
   background-color: gray;
   color: white;
   border-radius: 2px;
@@ -155,11 +155,11 @@ h3 {
 .pgRating {
   color: var(--main-color);
   background-color: rgba(0, 0, 0, 0.7);
-  font-size: 0.7rem;
+  font-size: 1rem;
   padding: 4px 15px;
   text-align: center;
   border-left: 2px solid var(--red-color);
-  width: 40px;
+  width: 70px;
   margin-left: auto;
   margin-right: 20px;
   margin-top: 300px;

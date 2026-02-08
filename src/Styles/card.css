@@ -1,7 +1,7 @@
 .card {
   background-color: hsla(0, 0%, 100%, 0.436);
   border: 1px solid black;
-  height: 135px;
+  height: 250px;
   position: relative;
   cursor: pointer;
   transition: transform 0.3s ease;
@@ -26,7 +26,7 @@
   top: -210%;
   right: 10%;
   opacity: 0;
-  font-size: 1.5rem;
+  font-size: 2rem;
   transition: opacity 0.7s ease;
 }
 .card:hover .add-btn {
@@ -41,23 +41,20 @@
   background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
 .title {
-  font-size: 0.7rem;
+  font-size: 1.1rem;
   color: white;
-  display: -webkit-box;
-  -webkit-line-clamp: 2; /* number of lines */
-  -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .year {
-  font-size: 0.7rem;
+  font-size: 1rem;
   color: var(--main-color);
 }
 
 .logos {
   position: absolute;
-  width: 12px;
+  width: 20px;
   top: 5%;
   left: 2%;
 }
