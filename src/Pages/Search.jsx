@@ -9,11 +9,13 @@ function Search() {
   const [isSearch, setIsSearch] = useState(false);
 
   function handleInput(e) {
-    if (e.target.value === "") {
-      return;
-    }
-    setSearchQuery(e.target.value.trim());
-    
+   const value = e.target.value;
+   setSearchQuery(value);
+
+   if (value === "") {
+     setMovies([]);
+     setIsSearch(false);
+   }
   }
 
   async function handleSubmit(e) {

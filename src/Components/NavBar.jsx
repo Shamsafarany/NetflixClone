@@ -3,6 +3,7 @@ import img from "../assets/icons8-netflix (1).svg";
 import "../styles/navBar.css";
 import "../Styles/search.css";
 import { Link } from "react-router-dom";
+import { FaBars } from "react-icons/fa";
 
 function NavBar({ type = "default" }) {
   const [scrolled, setScrolled] = useState(false);
@@ -68,6 +69,36 @@ function NavBar({ type = "default" }) {
             </div>
           </>
         )}
+        <div className="hamburger-menu">
+          <FaBars className="hamburger" />
+          <div className="dropdown" role="menu" aria-label="Mobile menu">
+            <Link to="/" className="li dropdown-item">
+              Home
+            </Link>
+            <Link
+              to="/shows"
+              className={`li dropdown-item ${
+                location.pathname === "/shows" ? "activeBar" : ""
+              }`}
+            >
+              TV Shows
+            </Link>
+            <Link
+              to="/movies"
+              className={`li dropdown-item ${
+                location.pathname === "/movies" ? "activeBar" : ""
+              }`}
+            >
+              Movies
+            </Link>
+            <Link to="/favorites" className="li dropdown-item">
+              Favorites
+            </Link>
+            <Link to="/search" className="li dropdown-item">
+              Search
+            </Link>
+          </div>
+        </div>
       </nav>
     </>
   );

@@ -51,4 +51,16 @@ margin: 20px auto;
 }
 
 
-
+@media (max-width: 450px) {
+  .searchForm{
+    width: 90%;
+  }
+  .searchInput{
+    font-size: 0.6rem;
+    padding: 10px;
+  }
+  .searchButton{
+    padding: 10px;
+    margin-right: 10px;
+  }
+}
