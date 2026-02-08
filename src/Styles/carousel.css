@@ -126,10 +126,10 @@ h3 {
 }
 
 .overview {
-  max-width: 350px;
+  max-width: 400px;
   width: 100%;
   box-sizing: border-box;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
 }
 
 .slideBtns {
@@ -164,3 +164,4 @@ h3 {
   margin-right: 20px;
   margin-top: 300px;
 }
+
