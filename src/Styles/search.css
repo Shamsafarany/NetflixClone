@@ -15,7 +15,6 @@
   margin: 20px;
   max-width: 600px;
   margin: 20px auto; 
-  
 }
 .searchForm input::placeholder {
   font-size: 1.5rem;
@@ -54,15 +53,22 @@
 
 
 @media (max-width: 450px) {
+  .searchContainer{
+
+  }
   .searchForm{
-    width: 90%;
+    width: 95%;
   }
   .searchInput{
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding: 10px;
   }
   .searchButton{
     padding: 10px;
     margin-right: 10px;
+    font-size: 1rem;
   }
+  .searchForm input::placeholder {
+  font-size: 1rem;
+}
 }
